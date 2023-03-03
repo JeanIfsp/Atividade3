@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matrícula Aluno</title>
+  </head>
+  <body>
+    <h1>Matrícula Aluno</h1>
+    <form>
+      <fieldset>
+        <legend>Dados Pessoais</legend>
+        <label>Nome:</label>
+        <input type="text" name="name" id="name" required pattern="[a-zA-Z\s]+$" placeholder="Nome">
+        <br><br>
+        <label for="cpf">CPF:</label>
+        <input type="text" name="cpf" id="cpf" required pattern="(\d{3}\.\d{3}\.\d{3}-\d{2})|(\d{11})" placeholder="XXX-XXX-XXX-XX">
+        <br><br>
+        <label>Data de Nascimento:</label>
+        <input type="date" min="2020-01-01" max="2022-02-03" required>
+        <br><br>
+        <label>Sexo:</label>
+        <input type="radio" id="man" name="sex">
+        <label for="man">Masculino</label>
+        <input type="radio" id="woman" name="sex">
+        <label for="woman">Feminino</label>
+        <br><br>
+        <label >Cidade: </label>
+        <input type="text" required pattern="[a-zA-Z\s]+$">
+        <label>Estado:</label>
+        <select name="states" id="states">
+          <option value="Sao Paulo">SP</option>
+          <option value="Rio de Janeiro">RJ</option>
+          <option value="Espirito Santo">ES</option>
+          <option value="Minas Gerais">MG</option>
+          <option value="Distrito Federal">DF</option>
+          <option value="Goias">GO</option>
+          <option value="Mato Grosso">MT</option>
+          <option value="Mato Grosso do Sul">MS</option>
+        </select>
+      </fieldset>
+      <br>
+      <fieldset>
+        <legend>Dados Da Matricula</legend>
+        <label>Curso:</label>
+        <input type="radio" id="ads" name="course">
+        <label for="ads">Análise e desenvolvimento de sistema</label>
+        <input type="radio" id="ec" name="course">
+        <label for="ec">Engenharia Mecânica</label>
+        <input type="radio" id="tsi" name="course">
+        <label for="tsi">Tecnologia e sistema para internet</label>
+        <br><br>
+        <label>Diciplina(s) Optativas:</label>
+        <input type="radio" id="pr" name="course">
+        <label for="pr">Programação de robôs</label>
+        <input type="radio" id="dia" name="course">
+        <label for="dia">Desenvolvimento Inteligência Artificial</label>
+        <br>
+        <input type="radio" id="mc" name="course">
+        <label for="mc">Modelagem Computacional</label>
+        <input type="radio" id="aid" name="course">
+        <label for="aid">Ambiente Isolados: desenvolvimento com docker</label>
+        <br><br>
+        <label>Sugestão de diciplinas futuras:</label>
+        <br><br>
+        <textarea id="review" name="review" rows="4" cols="50"></textarea>
+      </fieldset>
+      <br>
+      <input type="submit" value="Enviar">
+    </form>
+  </body>
+</html>
